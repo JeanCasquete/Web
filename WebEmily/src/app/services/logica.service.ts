@@ -45,4 +45,42 @@ export class LogicaService {
     return this.afs.collection('Practicas').valueChanges();
   
 }
+
+agregarDatosEstudiante(id: string, nombre: string, nivel: string, edad: string, campus:string, carrera:string, correo:string,) {
+  this.afs.collection('DatosEstudiante', ref => ref.where('id', '==', id))
+    .get()
+    .subscribe(querySnapshot => {
+      if (querySnapshot.size > 0) {
+        console.log('Esa id ya existe.');
+      } else {
+        const datos = {
+          id: id,
+          nombre: nombre,
+          nivel: nivel,
+          edad: edad,
+          campus: campus,
+          carrera: carrera,
+          correo: correo     
+        };
+        this.afs.collection('DatosEstudiante').add(datos)
+          .then(() => {
+            console.log('Datos agregados correctamente a Firestore.');
+          })
+          .catch((error) => {
+            console.error('Error al agregar los datos a Firestore:', error);
+          });
+      }
+    }, error => {
+      console.error('Error al consultar la colección:', error);
+    });
+
+    
+}
+
+getestudiantes(): Observable<any[]> {
+  // Obtiene los documentos de la colección "compras"
+  return this.afs.collection('DatosEstudiante').valueChanges();
+
+}
+
 }

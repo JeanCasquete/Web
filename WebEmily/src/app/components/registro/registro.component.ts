@@ -56,6 +56,7 @@ export class RegistroComponent implements OnInit {
           if (user) {
 
             console.log(user.nombre);
+            this.router.navigate(["/Login"])
           }
         });
         

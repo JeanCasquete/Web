@@ -7,6 +7,7 @@ import {PaginaNoEncontradaComponent} from "./components/pagina-no-encontrada/pag
 import { PracticasComponent } from './components/practicas/practicas.component';
 import { ActividadesComponent } from './components/actividades/actividades.component';
 import { HomeComponent } from './components/home/home.component';
+import { PlanillaComponent } from './components/planilla/planilla.component';
 //Iniciar Server comando : ng serve
 
 const routes: Routes = [
@@ -17,7 +18,9 @@ const routes: Routes = [
   children:[
     {path:"Home" , component:HomeComponent},
     {path:"Practicas" , component:PracticasComponent},
-    {path:"Actividades" , component:ActividadesComponent}
+    {path:"Actividades" , component:ActividadesComponent},
+    {path:"Planilla" , component:PlanillaComponent},
+
 
   ]
   },

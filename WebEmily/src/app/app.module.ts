@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +23,10 @@ import { PracticasComponent } from './components/practicas/practicas.component';
 import { ActividadesComponent } from './components/actividades/actividades.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { PlanillaComponent } from './components/planilla/planilla.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 
@@ -37,6 +43,7 @@ import { HomeComponent } from './components/home/home.component';
     ActividadesComponent,
     FooterComponent,
     HomeComponent,
+    PlanillaComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +51,10 @@ import { HomeComponent } from './components/home/home.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

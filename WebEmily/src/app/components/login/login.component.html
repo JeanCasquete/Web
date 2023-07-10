@@ -12,7 +12,7 @@
                       src="../../../assets/imagenes/uleam.png"
                     />
                   </div>
-                  <h1 class=" text-center font-bold">Registro</h1>
+                  <h1 class=" text-center font-bold">Login</h1>
     
                   <label class="label">
                     <span class="label-text font-sans font-semibold">Email</span>
@@ -21,15 +21,19 @@
                   <label class="label">
                     <span class="label-text font-sans font-semibold">Password</span>
                   </label>
-                  <input type="text" placeholder="password" formControlName="password" class="input input-bordered font-sans"/>
+                  <input type="password" placeholder="password" formControlName="password" class="input input-bordered font-sans"/>
                 </div>
 
           </form>
           <button class="btn btn-primary font-sans font-semibold" (click)="submitFormulario()">
             Login
           </button>
+          <div class="signup_link">
+            No eres usuario? <a routerLink="/Registro">registrate</a>
+          </div>
           </div>
         </div>
       </div>
     </div>
 </main>
+

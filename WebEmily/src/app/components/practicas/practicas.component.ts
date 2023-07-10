@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Doctor } from "../../models/doctor.model";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { LogicaService } from 'src/app/services/logica.service';

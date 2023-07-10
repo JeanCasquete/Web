@@ -46,9 +46,9 @@ private emailPattern: any = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)
     this.afAuth.signInWithEmailAndPassword(email,password).then((user)=>{
       console.log(user);
       if(user.user?.emailVerified) {
-        this.router.navigate(['/Inicio'])
+        this.router.navigate(['/Inicio/Home'])
       }else {
-        this.router.navigate(['/Inicio'])
+        this.router.navigate(['/Inicio/Home'])
       }
       
     }).catch((error)=> {
